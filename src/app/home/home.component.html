@@ -1,0 +1,493 @@
+<!-- <section class="hero">
+  <div class="hero-content">
+    <h1>MMG</h1>
+    <div class="heading-text">
+      <p>Maa Meenakshi Granites</p>
+      <div class="paragraph">
+        <p>
+          We delivers premium granite solutions for Flooring, combining
+          durability, elegance, and expert craftsmanship. From countertops to
+          custom designs, we bring nature's beauty to your space with lasting
+          quality.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="products">
+    <p>PRODUCTS</p>
+  </div>
+  <div class="container">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide-products">
+          <img src="/marble.png" />
+          <p>Marble</p>
+        </div>
+        <div class="slide-products">
+          <img src="/sandstone.png" />
+          <p>Sand Stone</p>
+        </div>
+        <div class="slide-products">
+          <img src="/granite.png" />
+          <p>Granite</p>
+        </div>
+        <div class="slide-products">
+          <img src="/Limestone.png" />
+          <p>Lime Stone</p>
+        </div>
+
+
+        <div class="slide-products">
+          <img src="/marble.png" />
+          <p>Marble</p>
+        </div>
+        <div class="slide-products">
+          <img src="/sandstone.png" />
+          <p>Sand Stone</p>
+        </div>
+        <div class="slide-products">
+          <img src="granite.png" />
+          <p>Granite</p>
+        </div>
+        <div class="slide-products">
+          <img src="/Limestone.png" />
+          <p>Lime Stone</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>{{ heroSection.title }}</h1>
+    <div class="heading-text">
+      <p>{{ heroSection.subtitle }}</p>
+      <div class="paragraph">
+        <p>{{ heroSection.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="products">
+    <p>{{ heroSection.productsTitle }}</p>
+  </div>
+  <div class="container-slider">
+    <div class="slider">
+      <div class="slide-track">
+        <div
+          *ngFor="let product of heroSection.products"
+          class="slide-products">
+          <img [src]="product.image" [alt]="product.name" />
+          <p>{{ product.name }}</p>
+        </div>
+        <!-- Duplicate for infinite scrolling effect -->
+        <div
+          *ngFor="let product of heroSection.products"
+          class="slide-products">
+          <img [src]="product.image" [alt]="product.name" />
+          <p>{{ product.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About-us -->
+<!-- 
+<div class="container-about">
+  <div class="header">
+    <p>About Us</p>
+  </div>
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="text">
+        <p>
+          Welcome to MMG – Maa Meenakshi Granites, where nature’s finest
+          creations meet unparalleled craftsmanship. Established with a vision
+          to bring the timeless beauty of natural stone to your spaces, we
+          specialize in offering premium-quality granite that transforms every
+          project into a masterpiece. At MMG, we pride ourselves on our
+          commitment to quality, sustainability, and customer satisfaction.
+          Sourced from the finest quarries, our granite collections boast
+          durability, elegance, and a diverse range of colors and textures to
+          suit every aesthetic.
+        </p>
+      </div>
+    </div>
+    <div class="images">
+      <img class="image1" alt="image1" src="/image1.png" />
+      <img alt="image2" class="overlay-img" src="/image2.png" />
+    </div>
+  </div>
+  <div class="experience">35+ Years of Experience</div>
+  <a class="button" href="#"> Read more </a>
+</div> -->
+
+
+<div class="container mt-4">
+  <div class="heading text-center">
+    <p>{{ aboutUs.title }}</p>
+  </div>
+  <div class="row content-wrapper">
+    <div class="content col-lg-6 col-md-12 col-sm-12">
+      <p>{{ aboutUs.description }}</p>
+    </div>
+    <div class="images col-lg-6 col-md-12 col-sm-12">
+      <div class="image1">
+        <img alt="image1" [src]="aboutUs.images[0]" />
+        <div class="overlay-img">
+          <img alt="image2" [src]="aboutUs.images[1]" />
+        </div>
+      </div>
+    </div>
+    <div class="experience">{{ aboutUs.experience }}</div>
+  </div>
+  <div class="button">
+    <a href="#">{{ aboutUs.buttonText }}</a>
+  </div>
+</div>
+
+<!-- We provide -->
+
+<!-- <div class="container-fluid">
+  <div class="background-image-section">
+    <div class="bubbles">
+      <div class="bubble bubble1 active"></div>
+      <div class="bubble bubble2"></div>
+    </div>
+    <div class="we-provide-heading"><h1>We Provide</h1></div>
+    <div class="container row active-content" id="leftContent">
+      <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 provide-images">
+        <div class="provide-image1">
+          <img alt="image1" src="/provide1.png" />
+          <div class="provide-overlay-img">
+            <img alt="provide-image2" src="/provide2.png" />
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 provide-content">
+        <div class="granite-heading">
+          <h1>Granite Stone<br>Cladding</h1>
+          <div class="before-line"></div>
+        </div>
+        <div class="provide-text">
+          <ul>
+            <li>Custom-fitted granite panels</li>
+            <li>Weather-resistant and long-<br>lasting materials</li>
+            <li>Professional installation for a<br>flawless finish</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container row passive-content" id="rightContent">
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 provide-content-hid">
+        <div class="wholesale-heading">
+          <h1>Wholesale<br>Granite Supply</h1>
+          <div class="after-line"></div>
+        </div>
+        <div class="provide-text-hid">
+          <ul>
+            <li>Wide selection of premium<br>granite</li>
+            <li>Bulk supply for contractors<br>and retailers</li>
+            <li>Competitive pricing and<br>reliable delivery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 provide-images-hidden">
+        <div class="provide-image3">
+          <img alt="image3" src="/provide3.png" />
+          <div class="provide-overlay-img-hid">
+            <img alt="provide-image4" src="/provide4.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container-fluid p-0">
+  <div class="background-image-section">
+    <div class="bubbles" id="bubbles">
+      <div class="bubble bubble1 active"></div>
+      <div class="bubble bubble2"></div>
+    </div>
+    <div class="we-provide-heading"><h1>We Provide</h1></div>
+
+    <div
+      class="container row active-content"
+      id="leftContent"
+      *ngFor="let section of section1"
+    >
+      <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 provide-images">
+        <div class="provide-image1">
+          <img alt="image1" [src]="section.images.main" />
+          <div class="provide-overlay-img">
+            <img alt="image-overlay" [src]="section.images.overlay" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 provide-content">
+        <div class="granite-heading">
+          <h1>{{ section.title }}<br />{{ section.subtitle }}</h1>
+          <div class="before-line"></div>
+        </div>
+        <div class="provide-text">
+          <ul>
+            <li *ngFor="let feature of section.features">{{ feature }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container row passive-content"
+      id="rightContent"
+      *ngFor="let section of section2"
+    >
+      <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 provide-content-hid">
+        <div class="wholesale-heading">
+          <div class="after-line"></div>
+          <h1>{{ section.title }}<br />{{ section.subtitle }}</h1>
+        </div>
+        <div class="provide-text-hid">
+          <ul>
+            <li *ngFor="let feature of section.features">{{ feature }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 provide-images-hidden">
+        <div class="provide-image3">
+          <img alt="image3" [src]="section.images.main" />
+          <div class="provide-overlay-img-hid">
+            <img alt="image-overlay" [src]="section.images.overlay" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Our Gallery -->
+
+<!-- <div class="our-gallery">
+  <div class="gallery-heading">
+    <p>Our Gallery</p>
+  </div>
+  <div class="main-top-container">
+    <div class="top-pattern"></div>
+    <div class="top-curved"></div>
+    <div class="top-white"></div>
+  </div>
+
+  <div class="container-gallery">
+    <div class="slider-gallery">
+      <div class="slide-track-gallery">
+        <div class="slide-gallery">
+          <img src="/gallery1.png" />
+        </div>
+        <div class="slide-gallery">
+          <img src="/gallery2.png" />
+        </div>
+        <div class="slide-gallery">
+          <img src="/gallery3.png" />
+        </div>
+
+        
+
+        <div class="slide-gallery">
+          <img src="/gallery1.png" />
+        </div>
+        <div class="slide-gallery">
+          <img src="/gallery2.png" />
+        </div>
+        <div class="slide-gallery">
+          <img src="/gallery3.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-bottom-container">
+    <div class="bottom-pattern"></div>
+    <div class="bottom-curved"></div>
+    <div class="bottom-white"></div>
+  </div>
+</div> -->
+
+<div class="our-gallery">
+  <div class="gallery-heading">
+    <p>Our Gallery</p>
+  </div>
+
+  <div class="main-top-container">
+    <div class="top-pattern"></div>
+    <div class="top-curved"></div>
+    <div class="top-white"></div>
+  </div>
+
+  <div class="container-gallery">
+    <div class="slider-gallery">
+      <div class="slide-track-gallery">
+        <div class="slide-gallery" *ngFor="let image of duplicateImages">
+          <img [src]="image" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-bottom-container">
+    <div class="bottom-pattern"></div>
+    <div class="bottom-curved"></div>
+    <div class="bottom-white"></div>
+  </div>
+</div>
+
+<!-- Testimonials -->
+<!-- <div class="testimonials">
+  <p class="testimonial-heading p-0 m-0">Testimonials</p>
+  <p class="sub-heading">~What people say about us</p>
+
+ 
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+     <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      
+
+      <div class="carousel-item active">
+        <div class="testimonial-container">
+          <div class="card-1">
+            <img alt="Angelica" class="profile-img" src="test1.png" />
+            <div class="name">Angelica</div>
+            <div class="quote">
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra,
+              turpis ut laoreet vehicula, sapien justo tincidunt arcu...
+              jjnjscibrvb ccejicbecid bebeib  eijbeic budebc be c djcnihbhe 
+              cebcech beihbch biebec ”
+            </div>
+            <button class="read-more-btn">Read more</button>
+          </div>
+
+          <div class="card-1">
+            <img alt="Michael" class="profile-img" src="test1.png" />
+            <div class="name">Michael</div>
+            <div class="quote">
+              “Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam, nisi ut aliquid commodi consequatur...”
+            </div>
+            <button class="read-more-btn">Read more</button>
+          </div>                      
+
+          <div class="card-1">
+            <img alt="Michael" class="profile-img" src="test1.png" />
+            <div class="name">Michael</div>
+            <div class="quote">
+              “Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+              laboriosam, nisi ut aliquid commodi consequatur...”
+            </div>
+            <button class="read-more-btn">Read more</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="carousel-item">
+        <div class="testimonial-container">
+          <div class="card-1">
+            <img alt="Sophia" class="profile-img" src="test1.png" />
+            <div class="name">Sophia</div>
+            <div class="quote">
+              “Nullam feugiat sem sit amet dolor cursus, in venenatis elit. Cras ut turpis at
+              mauris faucibus efficitur...”
+            </div>
+            <button class="read-more-btn">Read more</button>
+          </div>
+
+          <div class="card-1">
+            <img alt="David" class="profile-img" src="test1.png" />
+            <div class="name">David</div>
+            <div class="quote">
+              “Aliquam erat volutpat. Suspendisse potenti. Duis vehicula, libero non cursus volutpat...”
+            </div>
+            <button class="read-more-btn">Read more</button>
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="carousel-item">
+        <div class="testimonial-container">
+          <div class="card-1">
+            <img alt="Emma" class="profile-img" src="test1.png" />
+            <div class="name">Emma</div>
+            <div class="quote">
+              “Vestibulum at lacus malesuada, tempus lorem ut, auctor ligula. Nulla facilisi...”
+            </div>
+            <button class="read-more-btn">Read more</button>
+          </div>
+
+          <div class="card-1">
+            <img alt="Liam" class="profile-img" src="test1.png" />
+            <div class="name">Liam</div>
+            <div class="quote">
+              “Curabitur non turpis at libero ullamcorper condimentum. Mauris eu mi eget libero tempor gravida...”
+            </div>
+            <button class="read-more-btn">Read more</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div> -->
+
+<div class="testimonials">
+  <p class="testimonial-heading p-0 m-0">Testimonials</p>
+  <p class="sub-heading">~What people say about us</p>
+  <ngx-slick-carousel
+    class="testimonial-slider"
+    #SlickModal="slick-carousel"
+    [config]="slideConfig"
+  >
+    <div
+      ngxSlickItem
+      class="card-1 mx-2"
+      *ngFor="let testimonial of testimonials"
+    >
+      <img
+        [alt]="testimonial.name"
+        class="profile-img"
+        [src]="testimonial.image"
+      />
+      <div class="name">{{ testimonial.name }}</div>
+      <div class="quote">“{{ testimonial.quote }}”</div>
+      <a class="read-more-btn" href="#">Read more</a>
+    </div>
+  </ngx-slick-carousel>
+</div>
+
+<div class="container">
+  <div class="contact-us">
+    <div class="contact-us-heading">
+      <p>Contact Us</p>
+    </div>
+  </div>
+</div>
