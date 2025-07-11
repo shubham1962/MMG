@@ -1,13 +1,13 @@
-<!-- 
+<!--
 <header class="header">
     <nav>
       <a href="#" class="logo">
         <div class="logo-div">
           <img src="/logo.png" alt="logo" class="logo-img"/>
-         
+
         </div>
       </a>
-   
+
       <ul class="nav-links">
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/products">Products</a></li>
@@ -16,7 +16,7 @@
         <li class="contact-info">
             <i class="fas fa-phone"></i> +91-1234567890
         </li>
-       
+
       </ul>
     </nav>
   </header> -->
@@ -24,12 +24,12 @@
 <header class="header">
   <div class="logo-div">
     <a href="#" >
-      <img src="/logo.png" alt="logo" />
+      <img src="/assets/logo.png" alt="logo" class="logo-img" />
     </a>
   </div>
 
   <nav>
- 
+
     <!-- Offcanvas Toggle Button (Visible only on small screens) -->
     <button
       class="btn btn-primary menu-btn"
@@ -83,13 +83,13 @@
           <img src="/logo.png" alt="logo" class="logo-img" />
         </div>
       </a>
-  
-     
+
+
       <div class="menu-toggle"  (click)="toggleMenu()">
         <i class="fa-solid" [ngClass]="isMenuOpen ? 'fa-times' : 'fa-bars'"></i>
       </div>
-  
-     
+
+
       <ul class="nav-links" id="links" [class.show]="isMenuOpen">
         <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
         <li><a routerLink="/products" (click)="closeMenu()">Products</a></li>

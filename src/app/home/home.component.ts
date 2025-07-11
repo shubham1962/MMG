@@ -13,41 +13,41 @@ export class HomeComponent implements AfterViewInit {
   heroSection = {
     title: "MMG",
     subtitle: "Maa Meenakshi Granites",
-    description: `We deliver premium granite solutions for Flooring, combining 
-      durability, elegance, and expert craftsmanship. From countertops to 
-      custom designs, we bring nature's beauty to your space with lasting 
+    description: `We deliver premium granite solutions for Flooring, combining
+      durability, elegance, and expert craftsmanship. From countertops to
+      custom designs, we bring nature's beauty to your space with lasting
       quality.`,
     productsTitle: "PRODUCTS",
     products: [
-      { name: "Marble", image: "/marble.png" },
-      { name: "Sand Stone", image: "/sandstone.png" },
-      { name: "Granite", image: "/granite.png" },
-      { name: "Lime Stone", image: "/Limestone.png" }
+      { name: "Marble", image: "/assets/marble.png" },
+      { name: "Sand Stone", image: "/assets/sandstone.png" },
+      { name: "Granite", image: "/assets/granite.png" },
+      { name: "Lime Stone", image: "/assets/Limestone.png" }
     ]
   };
 
 
   aboutUs = {
     title: "About Us",
-    description: `Welcome to MMG – Maa Meenakshi Granites, where nature’s finest 
-      creations meet unparalleled craftsmanship. Established with a vision 
-      to bring the timeless beauty of natural stone to your spaces, we 
-      specialize in offering premium-quality granite that transforms every 
-      project into a masterpiece. At MMG, we pride ourselves on our 
-      commitment to quality, sustainability, and customer satisfaction. 
-      Sourced from the finest quarries, our granite collections boast 
-      durability, elegance, and a diverse range of colors and textures to 
+    description: `Welcome to MMG – Maa Meenakshi Granites, where nature’s finest
+      creations meet unparalleled craftsmanship. Established with a vision
+      to bring the timeless beauty of natural stone to your spaces, we
+      specialize in offering premium-quality granite that transforms every
+      project into a masterpiece. At MMG, we pride ourselves on our
+      commitment to quality, sustainability, and customer satisfaction.
+      Sourced from the finest quarries, our granite collections boast
+      durability, elegance, and a diverse range of colors and textures to
       suit every aesthetic.`,
     experience: "35+ Years of Experience",
     buttonText: "Read more",
-    images: ["/image1.png", "/image2.png"]
+    images: ["/assets/image1.png", "/assets/image2.png"]
   };
 
 
   galleryImages: string[] = [
-    '/gallery1.png',
-    '/gallery2.png',
-    '/gallery3.png'
+    '/assets/gallery1.png',
+    '/assets/gallery2.png',
+    '/assets/gallery3.png'
   ];
 
   get duplicateImages(): string[] {
@@ -55,12 +55,12 @@ export class HomeComponent implements AfterViewInit {
   }
 
   testimonials = [
-    { name: 'Angelica', image: 'test1.png', quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, turpis ut laoreet vehicula, sapien' },
-    { name: 'Michael', image: 'test2.png', quote: 'Ut enim ad hf sjr jdejd jie knej jxdk sorndj minima veniam, quis nostrum exercitationem ullam...' },
-    { name: 'Sophia', image: 'test1.png', quote: 'Nullam feugiat sem swirk angkek jujnx qwejnjc d sit amet dolor cursus, in venenatis elit...' },
-    { name: 'David', image: 'test2.png', quote: 'Aliquam erat volutpat.lorem asr sersj jmnf ieyrt loki thor iron sung naruto sasuke itachi Suspendisse potenti...' },
-    { name: 'Emma', image: 'test1.png', quote: 'Vestibulum at lacus malesuada, ichigo black clover one piece bleach tempus lorem ut, auctor ligula...' },
-    { name: 'Liam', image: 'test2.png', quote: 'Curabitur non turpis at libero death note demon slayer solo levelling dororo ullamcorper condimentum...' }
+    { name: 'Angelica', image: '/assets/test1.png', quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra, turpis ut laoreet vehicula, sapien' },
+    { name: 'Michael', image: '/assets/test2.png', quote: 'Ut enim ad hf sjr jdejd jie knej jxdk sorndj minima veniam, quis nostrum exercitationem ullam...' },
+    { name: 'Sophia', image: '/assets/test1.png', quote: 'Nullam feugiat sem swirk angkek jujnx qwejnjc d sit amet dolor cursus, in venenatis elit...' },
+    { name: 'David', image: '/assets/test2.png', quote: 'Aliquam erat volutpat.lorem asr sersj jmnf ieyrt loki thor iron sung naruto sasuke itachi Suspendisse potenti...' },
+    { name: 'Emma', image: '/assets/test1.png', quote: 'Vestibulum at lacus malesuada, ichigo black clover one piece bleach tempus lorem ut, auctor ligula...' },
+    { name: 'Liam', image: '/assets/test2.png', quote: 'Curabitur non turpis at libero death note demon slayer solo levelling dororo ullamcorper condimentum...' }
   ];
 
 
@@ -102,7 +102,7 @@ export class HomeComponent implements AfterViewInit {
         'Weather-resistant and long-lasting materials',
         'Professional installation for a flawless finish',
       ],
-      images: { main: '/provide1.png', overlay: '/provide2.png' }
+      images: { main: '/assets/provide1.png', overlay: '/assets/provide2.png' }
     }
   ];
     section2 =[
@@ -114,7 +114,7 @@ export class HomeComponent implements AfterViewInit {
         'Bulk supply for contractors and retailers',
         'Competitive pricing and reliable delivery',
       ],
-      images: { main: '/provide3.png', overlay: '/provide4.png' },
+      images: { main: '/assets/provide3.png', overlay: '/assets/provide4.png' },
     }
   ];
 
@@ -132,7 +132,7 @@ export class HomeComponent implements AfterViewInit {
     if (leftImage && leftImageOverlay && rightImageOverlay && rightImage && leftContent && rightContent && bubble1 && bubble2 && leftContentContainer) {
       leftImage.addEventListener('click', () => {
         console.log("clicked");
-        
+
         leftImage.classList.add('hide'); // Move right and fade out
         leftImageOverlay.classList.add('hide');
         leftContent.classList.add('fade-out'); // Fade out content

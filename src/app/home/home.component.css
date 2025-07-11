@@ -1,7 +1,8 @@
 .hero {
   position: relative;
-  background: url('/background.png')
+  background: url('/assets/background.png')
     no-repeat center center/cover;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,7 +445,7 @@
 /* We provide */
 
 .background-image-section {
-  background: url("/we-provide-bg.png");
+  background: url("/assets/we-provide-bg.png");
   background-size: cover;
   background-position: center;
   width: 100%;
